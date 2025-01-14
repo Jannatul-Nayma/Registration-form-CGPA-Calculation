@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form_style.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="Connection.php" method="POST">
+      <div>
+        <label for="fullname"
+          >Fullname:
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Enter fullname "
+            required
+          />
+        </label>
+      </div>
+      <br />
+
+      <div>
+        <label for="student_id"
+          >Student ID:
+          <input
+            type="number"
+            name="student_id"
+            id="student_id"
+            placeholder="Enter student id "
+            required
+          />
+        </label>
+      </div>
+      <br />
+
+      <div>
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email"
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="password">Password: </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+          title="Password must be at least 8 characters long and include at least one letter and one number."
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" name="dob" id="dob" />
+      </div>
+      <br />
+      <div>
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" id="gender_male" value="male" />Male
+        <input
+          type="radio"
+          name="gender"
+          id="gender_female"
+          value="female"
+        />Female
+      </div>
+      <br />
+
+      <div>
+        <label for="religion">Religion: </label>
+        <input
+          type="radio"
+          name="religion"
+          id="religion_muslim"
+          value="muslim"
+          checked
+        />Muslim
+        <input
+          type="radio"
+          name="religion"
+          id="religion_cristian"
+          value="cristian"
+        />Cristian
+      </div>
+
+      <br />
+
+      <div>
+        <label for="department">Department: </label>
+        <select name="department">
+          <option value="cse">CSE</option>
+          <option value="eee" selected>EEE</option>
+          <option value="civil">CIVIL</option>
+          <option value="llb">LLB</option>
+        </select>
+      </div>
+      <br />
+
+      <div>
+        <label for="number">Phone Number: </label>
+        <input type="number" name="number" id="number" required />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Register" />
+        <input type="reset" value="clear" />
+      </div>
+    </form>
+  </body>
+</html>

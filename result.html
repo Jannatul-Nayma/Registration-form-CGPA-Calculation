@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="result.css" />
+
+    <title>CGPA Result</title>
+    <script>
+      function calculateCGPA() {
+        const params = new URLSearchParams(window.location.search);
+        const marks = [
+          parseFloat(params.get("subject1")) || 0,
+          parseFloat(params.get("subject2")) || 0,
+          parseFloat(params.get("subject3")) || 0,
+          parseFloat(params.get("subject4")) || 0,
+          parseFloat(params.get("subject5")) || 0,
+          parseFloat(params.get("subject6")) || 0,
+        ];
+
+        if (marks.some((mark) => mark < 0 || mark > 100)) {
+          document.getElementById("result").innerText =
+            "Marks should be between 0 and 100.";
+          return;
+        }
+
+        const gpa = marks.map((mark) => {
+          if (mark >= 80) return 4.0;
+          else if (mark >= 75) return 3.75;
+          else if (mark >= 70) return 3.5;
+          else if (mark >= 65) return 3.25;
+          else if (mark >= 60) return 3.0;
+          else if (mark >= 55) return 2.75;
+          else if (mark >= 50) return 2.5;
+          else if (mark >= 45) return 2.25;
+          else if (mark >= 40) return 2.0;
+          else return 0.0;
+        });
+
+        const cgpa = gpa.reduce((acc, grade) => acc + grade, 0) / gpa.length;
+
+        document.getElementById(
+          "result"
+        ).innerText = `Your CGPA is: ${cgpa.toFixed(2)}`;
+      }
+    </script>
+  </head>
+  <body onload="calculateCGPA()">
+    <div class="container">
+      <h2>CGPA Result</h2>
+      <h3 id="result"></h3>
+      <br />
+      <a href="cgpacalculator.html"><button>Go Back</button></a>
+    </div>
+  </body>
+</html>

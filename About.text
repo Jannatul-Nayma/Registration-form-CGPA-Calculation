@@ -1,0 +1,17 @@
+Hi, I’m Jannatul Nayma, a passionate third-year Computer Science and Engineering (CSE) student at North Western University, Bangladesh. This project is my third year first semester project. 
+
+About This Project:
+This project is a web-based registration and CGPA calculator system designed to streamline the registration process for students and provide an intuitive interface for calculating CGPA.
+
+Key Features:
+Registration Form: Collects essential student details such as name, ID, email, department, and more, with real-time validations.
+CGPA Calculator: Allows users to input marks for multiple subjects and calculates the CGPA using a standard grading scale.
+Dynamic Feedback: Displays personalized feedback on successful registration and calculated CGPA.
+Responsive Design: Ensures usability across different devices with adaptive layouts and styling.
+
+Technologies Used:
+Frontend: HTML, CSS, JavaScript
+Backend: PHP
+Database: MySQL
+This project reflects my growing expertise in web development and my commitment to solving real-world problems through technology.
+
